@@ -1,15 +1,16 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<title>Signing in</title>
+    <meta charset="utf-8">
+    <title>Signing in</title>
+    <link rel="stylesheet" href="/style.css">
 </head>
-<body style="font: 16px/1.6 system-ui, sans-serif; margin: 40px">
-<p>Passing the TikTok sign-in back to the clip tool on this PC...</p>
-<p>If nothing happens, the clip tool isn't running.</p>
-<script>
-  // TikTok only returns sign-ins to an https address, so this page hands the code on to the tool running locally
-  location.replace('http://127.0.0.1:8710/api/posting/tiktok/callback' + location.search);
-</script>
+<body>
+    <p>Sending the TikTok sign-in to the clip tool on this PC.</p>
+    <p>If nothing happens, the clip tool isn't running.</p>
+    <script>
+        // TikTok only sends sign-ins to https pages, so this page passes the code on to the tool running locally
+        location.replace('http://127.0.0.1:8710/api/posting/tiktok/callback' + location.search);
+    </script>
 </body>
 </html>
