@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Signing in</title>
+</head>
+<body style="font: 16px/1.6 system-ui, sans-serif; margin: 40px">
+<p>Passing the Instagram sign-in back to the clip tool on this PC...</p>
+<p>If nothing happens, the clip tool isn't running.</p>
+<script>
+  // Instagram only returns sign-ins to an https address, so this page hands the code on to the tool running locally
+  location.replace('http://127.0.0.1:8710/api/posting/instagram/callback' + location.search);
+</script>
+</body>
+</html>
